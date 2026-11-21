@@ -66,6 +66,8 @@
     .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: end; margin-bottom: 38px; }
     h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.045em; margin: 12px 0 0; }
     .section-intro { color: var(--muted); max-width: 500px; margin: 0; }
+    .about-copy { color: var(--muted); max-width: 620px; }
+    .about-copy p:last-child { margin-bottom: 0; }
     .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 26px; box-shadow: 0 12px 35px #3933650a; transition: transform .25s ease, box-shadow .25s ease; }
     .card:hover, .card:focus-within { transform: translateY(-4px); box-shadow: 0 18px 38px #39336520; }
@@ -136,6 +138,7 @@
       .portrait-card { width: min(220px, 100%); }
       .section-head, .grid { grid-template-columns: 1fr; }
       .section { padding: 65px 0; }
+      section { scroll-margin-top: 145px; }
       .role { grid-template-columns: 1fr; gap: 7px; }
       .closing { align-items: flex-start; flex-direction: column; }
       .appointment-grid { grid-template-columns: 1fr; }
@@ -154,8 +157,10 @@
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Maxwell Matsri, home"><span class="brand-mark">MM</span><span class="brand-name">Maxwell Matsri</span></a>
       <nav aria-label="Main navigation">
+        <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -182,6 +187,18 @@
             <ul class="location-list" aria-labelledby="location-heading"><li>Accra</li><li>Takoradi</li></ul>
             <p class="location-label" id="work-style-heading">Work style</p>
             <ul class="location-list work-style" aria-labelledby="work-style-heading"><li>Hybrid</li><li>Remote</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">About me</div><h2>Connecting people,<br>technology &amp; industry.</h2></div>
+          <div class="about-copy">
+            <p>I'm Maxwell, an IT Support Engineer and Electrical Controls &amp; Automation Engineer with 8 years of experience. I bring a hands-on approach to supporting people, maintaining infrastructure, and solving technical problems across IT and industrial environments.</p>
+            <p>My work spans network design and cloud support, electrical and electronic controls, ABB robotics, and Microsoft Power Platform solutions that streamline business operations. I also bring project management experience, insight into PLC systems, and a background in software testing.</p>
           </div>
         </div>
       </div>
@@ -223,6 +240,19 @@
       </div>
     </section>
 
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Education</div><h2>A foundation in<br>engineering.</h2></div>
+          <p class="section-intro">My studies bring together electrical and electronic engineering with systems engineering.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="card-number">QUALIFICATION</span><h3>Bachelor of Technology in Electrical/Electronic Engineering</h3></article>
+          <article class="card"><span class="card-number">PROGRAM</span><h3>Systems Engineering</h3></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="projects">
       <div class="wrap">
         <div class="section-head">
@@ -231,7 +261,7 @@
         </div>
         <div class="grid projects">
           <article class="card"><span class="project-label">Robotics &bull; Automation</span><h3>ABB robot programming</h3><p>Wrote RAPID programs for ABB robots as part of my electrical, robotics, and IT work at Tenaris-Amaja.</p><ul class="tags"><li>ABB robotics</li><li>RAPID</li><li>Automation</li></ul><details class="project-details"><summary>More about ABB robot programming</summary><p>Programmed and maintained ABB robots and supported troubleshooting of hardware and software faults.</p></details></article>
-          <article class="card"><span class="project-label">Research &bull; Power systems</span><h3>Load flow design &amp; analysis</h3><p>Designed and analyzed load flow in Takoradi Technical University's power distribution network using ETAP, identifying opportunities to improve efficiency and reliability.</p><ul class="tags"><li>ETAP</li><li>Power distribution</li><li>Analysis</li></ul><details class="project-details"><summary>More about load flow analysis</summary><p>Proposed improvements to optimize load flow and reduce power losses, and presented findings to the university's technical team.</p></details></article>
+          <article class="card"><span class="project-label">Research &bull; Power systems</span><h3>Load flow design &amp; analysis</h3><p>Designed and analyzed load flow in a university power distribution network using ETAP, identifying opportunities to improve efficiency and reliability.</p><ul class="tags"><li>ETAP</li><li>Power distribution</li><li>Analysis</li></ul><details class="project-details"><summary>More about load flow analysis</summary><p>Proposed improvements to optimize load flow and reduce power losses, and presented findings to the university's technical team.</p></details></article>
           <article class="card"><span class="project-label">Project &bull; Electrical engineering</span><h3>Three-phase motor protection</h3><p>Designed, constructed, and tested an intelligent phase failure support system for three-phase motors using static phase shift technology.</p><ul class="tags"><li>Motor systems</li><li>Prototype</li><li>Phase failure</li></ul><details class="project-details"><summary>More about motor protection</summary><p>Built and tested a working prototype to help prevent and mitigate phase failure in three-phase motors.</p></details></article>
         </div>
       </div>
