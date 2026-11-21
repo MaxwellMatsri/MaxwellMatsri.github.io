@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f8ff">
-  <meta name="description" content="Maxwell Kofi Matsri's portfolio: IT field support, electrical engineering, and software quality assurance.">
+  <meta name="description" content="Maxwell Kofi Matsri's portfolio: IT field support, electrical engineering, and automation.">
   <title>Maxwell Kofi Matsri | IT &amp; Engineering</title>
   <style>
     :root {
@@ -37,7 +37,7 @@
     section { scroll-margin-top: 95px; }
     .hero { position: relative; padding: clamp(68px, 10vw, 118px) 0 80px; }
     .hero::before { content: ""; position: absolute; width: 700px; height: 700px; right: -220px; top: -180px; background: radial-gradient(circle, rgba(151,115,238,.18), rgba(255,154,161,.09) 40%, transparent 68%); pointer-events: none; }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; align-items: center; gap: clamp(45px, 8vw, 115px); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: clamp(45px, 8vw, 115px); }
     .eyebrow { color: var(--accent); font-size: .75rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
     .eyebrow::before { content: ""; display: inline-block; vertical-align: middle; width: 26px; height: 1px; margin-right: 10px; background: currentColor; }
     h1, h2, h3, p { margin-top: 0; }
@@ -48,20 +48,20 @@
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 20px; border: 1px solid #babcd7; border-radius: 100px; background: #fff; text-decoration: none; font-size: .9rem; font-weight: 700; }
     .button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .button:hover { transform: translateY(-2px); }
+    .button { transition: transform .18s ease, box-shadow .18s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px #3933651c; }
     .portrait-card { position: relative; padding: 12px; border: 1px solid #e6d9f4; border-radius: 24px; background: linear-gradient(145deg, #e6dcff, #ffe2e6); box-shadow: 0 24px 80px #5e4d8c24; }
-    .portrait-card img { width: 100%; aspect-ratio: 4 / 4.7; object-fit: cover; object-position: center top; border-radius: 15px; }
-    .portrait-caption { padding: 16px 5px 5px; display: flex; justify-content: space-between; gap: 10px; font-size: .8rem; color: var(--muted); }
+    .portrait-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 20%; border-radius: 15px; }
+    .portrait-caption { padding: 12px 5px 5px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; font-size: .8rem; color: var(--muted); }
     .portrait-caption strong { color: var(--text); }
     .section { padding: 85px 0; border-top: 1px solid var(--line); }
     .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: end; margin-bottom: 38px; }
     h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.045em; margin: 12px 0 0; }
     .section-intro { color: var(--muted); max-width: 500px; margin: 0; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 26px; box-shadow: 0 12px 35px #3933650a; }
     .grid:not(.projects) .card:nth-child(1) { border-top: 4px solid #7354d6; }
     .grid:not(.projects) .card:nth-child(2) { border-top: 4px solid #dd6880; }
-    .grid:not(.projects) .card:nth-child(3) { border-top: 4px solid #398a9e; }
     .card-number { color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .12em; }
     .card h3 { margin: 24px 0 10px; font-size: 1.18rem; letter-spacing: -.02em; }
     .card p, .card li { color: var(--muted); font-size: .93rem; }
@@ -77,6 +77,12 @@
     .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .project-label { color: var(--accent); font-size: .76rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
     .projects h3 { margin-top: 18px; }
+    .project-details { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 14px; }
+    .project-details summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--accent); cursor: pointer; font-size: .88rem; font-weight: 700; list-style: none; }
+    .project-details summary::-webkit-details-marker { display: none; }
+    .project-details summary::after { content: "+"; font-size: 1.25rem; line-height: 1; }
+    .project-details[open] summary::after { content: "−"; }
+    .project-details p { margin: 14px 0 0; }
     .education { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .education h3 { margin: 0 0 8px; }
     .education p { margin: 0; }
@@ -93,7 +99,7 @@
       .brand-name { display: none; }
       nav { justify-content: flex-end; gap: 10px 17px; }
       .hero-grid { grid-template-columns: 1fr; }
-      .portrait-card { max-width: 340px; }
+      .portrait-card { width: min(220px, 100%); }
       .section-head, .grid, .education { grid-template-columns: 1fr; }
       .section { padding: 65px 0; }
       .role { grid-template-columns: 1fr; gap: 7px; }
@@ -101,6 +107,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      .button { transition: none; }
       .button:hover { transform: none; }
     }
   </style>
@@ -123,10 +130,10 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">IT support &bull; engineering &bull; quality assurance</div>
+          <div class="eyebrow">IT support &bull; engineering &bull; automation</div>
           <h1>Maxwell Kofi <span>Matsri.</span></h1>
           <p class="lead">Connecting people, technology, and reliable systems.</p>
-          <p class="hero-note">IT Field Support Engineer and Electrical Engineering graduate with experience across infrastructure, automation, and software testing.</p>
+          <p class="hero-note">IT Field Support Engineer and Electrical Engineering graduate with experience across infrastructure, robotics, and automation.</p>
           <div class="actions">
             <a class="button primary" href="#contact">Get in touch &rarr;</a>
             <a class="button" href="#projects">View selected projects</a>
@@ -143,12 +150,11 @@
       <div class="wrap">
         <div class="section-head">
           <div><div class="eyebrow">What I do</div><h2>Practical expertise,<br>across disciplines.</h2></div>
-          <p class="section-intro">From maintaining enterprise infrastructure to testing software and working with industrial systems, I bring a hands-on approach to technical challenges.</p>
+          <p class="section-intro">From maintaining enterprise infrastructure to working with industrial systems, I bring a hands-on approach to technical challenges.</p>
         </div>
         <div class="grid">
           <article class="card"><span class="card-number">01 / INFRASTRUCTURE</span><h3>IT &amp; networking</h3><p>Supporting users and maintaining reliable networks, servers, cloud environments, and IT assets.</p><ul class="tags"><li>Microsoft Azure</li><li>Office 365</li><li>Active Directory</li><li>Cisco</li><li>Windows &amp; Linux</li></ul></article>
           <article class="card"><span class="card-number">02 / ENGINEERING</span><h3>Electrical &amp; automation</h3><p>Applying electrical engineering and maintenance experience to control systems and industrial equipment.</p><ul class="tags"><li>ABB robotics</li><li>RAPID</li><li>PLC</li><li>SCADA</li><li>ETAP</li></ul></article>
-          <article class="card"><span class="card-number">03 / QUALITY</span><h3>Software QA</h3><p>Testing functionality and usability, documenting defects, and collaborating with teams on product quality.</p><ul class="tags"><li>Functional testing</li><li>Regression testing</li><li>JIRA</li><li>TestRail</li></ul></article>
         </div>
       </div>
     </section>
@@ -157,11 +163,10 @@
       <div class="wrap">
         <div class="section-head">
           <div><div class="eyebrow">Career journey</div><h2>Experience in action.</h2></div>
-          <p class="section-intro">A background spanning field support, infrastructure, electrical systems, and software quality assurance.</p>
+          <p class="section-intro">A background spanning field support, infrastructure, electrical systems, and robotics.</p>
         </div>
         <div class="timeline">
           <article class="role"><time>Apr 2025 &ndash; Present</time><div><h3>IT Field Support Engineer</h3><div class="company">TechnipFMC Ghana Ltd</div><p>Administer Azure, Office 365, and Active Directory; support networks, servers, users, security, and IT asset lifecycles.</p></div></article>
-          <article class="role"><time>Oct 2020 &ndash; Present</time><div><h3>Software Quality Assurance Lead</h3><div class="company">Applause uTest</div><p>Lead functional and usability testing, perform regression testing, report defects, and collaborate with global teams.</p></div></article>
           <article class="role"><time>Dec 2024 &ndash; Apr 2025</time><div><h3>RP Testing Field Support Assistant</h3><div class="company">SLB (Schlumberger)</div><p>Supported field equipment readiness, inventory, safety, and mobilization.</p></div></article>
           <article class="role"><time>Jul 2024 &ndash; Dec 2024</time><div><h3>Electrical &amp; IT Consultant</h3><div class="company">Freelance</div><p>Provided technical support, IT infrastructure solutions, and electrical maintenance and safety inspections.</p></div></article>
           <article class="role"><time>Oct 2023 &ndash; Oct 2024</time><div><h3>Graduate Trainee &ndash; Electrical, Robotics &amp; IT</h3><div class="company">Tenaris-Amaja Tubular Services Ltd</div><p>Worked across electrical maintenance, ABB robotics, network infrastructure, and pipe and warehouse operations.</p></div></article>
@@ -174,11 +179,12 @@
       <div class="wrap">
         <div class="section-head">
           <div><div class="eyebrow">Selected work</div><h2>Engineering ideas,<br>put into practice.</h2></div>
-          <p class="section-intro">Research and project work from my electrical engineering background.</p>
+          <p class="section-intro">Research and practical work from my electrical engineering and robotics experience. Open a project to learn more.</p>
         </div>
         <div class="grid projects">
-          <article class="card"><span class="project-label">Research &bull; Power systems</span><h3>Load flow design &amp; analysis</h3><p>Designed and analyzed load flow in Takoradi Technical University's power distribution network using ETAP, identifying opportunities to improve efficiency and reliability.</p><ul class="tags"><li>ETAP</li><li>Power distribution</li><li>Analysis</li></ul></article>
-          <article class="card"><span class="project-label">Project &bull; Electrical engineering</span><h3>Three-phase motor protection</h3><p>Designed, constructed, and tested an intelligent phase failure support system for three-phase motors using static phase shift technology.</p><ul class="tags"><li>Motor systems</li><li>Prototype</li><li>Phase failure</li></ul></article>
+          <article class="card"><span class="project-label">Robotics &bull; Automation</span><h3>ABB robot programming</h3><p>Wrote RAPID programs for ABB robots as part of my electrical, robotics, and IT work at Tenaris-Amaja.</p><ul class="tags"><li>ABB robotics</li><li>RAPID</li><li>Automation</li></ul><details class="project-details"><summary>More about ABB robot programming</summary><p>Programmed and maintained ABB robots and supported troubleshooting of hardware and software faults.</p></details></article>
+          <article class="card"><span class="project-label">Research &bull; Power systems</span><h3>Load flow design &amp; analysis</h3><p>Designed and analyzed load flow in Takoradi Technical University's power distribution network using ETAP, identifying opportunities to improve efficiency and reliability.</p><ul class="tags"><li>ETAP</li><li>Power distribution</li><li>Analysis</li></ul><details class="project-details"><summary>More about load flow analysis</summary><p>Proposed improvements to optimize load flow and reduce power losses, and presented findings to the university's technical team.</p></details></article>
+          <article class="card"><span class="project-label">Project &bull; Electrical engineering</span><h3>Three-phase motor protection</h3><p>Designed, constructed, and tested an intelligent phase failure support system for three-phase motors using static phase shift technology.</p><ul class="tags"><li>Motor systems</li><li>Prototype</li><li>Phase failure</li></ul><details class="project-details"><summary>More about motor protection</summary><p>Built and tested a working prototype to help prevent and mitigate phase failure in three-phase motors.</p></details></article>
         </div>
       </div>
     </section>
