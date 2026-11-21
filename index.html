@@ -77,6 +77,8 @@
     .grid:not(.projects) .card:nth-child(2) { border-top: 4px solid #dd6880; }
     .grid:not(.projects) .card:nth-child(3) { border-top: 4px solid #398a9e; }
     .grid:not(.projects) .card:nth-child(4) { border-top: 4px solid #be7751; }
+    .grid:not(.projects) .card:nth-child(5) { border-top: 4px solid #7354d6; }
+    .grid:not(.projects) .card:nth-child(6) { border-top: 4px solid #398a9e; }
     .card-number { color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .12em; }
     .card h3 { margin: 24px 0 10px; font-size: 1.18rem; letter-spacing: -.02em; }
     .card p, .card li { color: var(--muted); font-size: .93rem; }
@@ -105,7 +107,12 @@
     .closing p { color: var(--muted); max-width: 650px; margin-bottom: 0; }
     .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
     .contact-links a { overflow-wrap: anywhere; }
-    .appointment { margin-top: 44px; padding: clamp(20px, 4vw, 36px); border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+    .appointment-disclosure { margin-top: 32px; }
+    .appointment-disclosure summary { cursor: pointer; list-style: none; }
+    .appointment-disclosure summary::-webkit-details-marker { display: none; }
+    .appointment-disclosure summary::after { content: "+"; margin-left: 10px; font-size: 1.15rem; }
+    .appointment-disclosure[open] summary::after { content: "−"; }
+    .appointment { margin-top: 18px; padding: clamp(20px, 4vw, 36px); border: 1px solid var(--line); border-radius: 18px; background: #fff; }
     .appointment h3 { margin: 0 0 8px; font-size: 1.4rem; }
     .appointment p { color: var(--muted); font-size: .9rem; }
     .appointment-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
@@ -186,10 +193,12 @@
           <p class="section-intro">From business solutions and network infrastructure to industrial systems, I bring a hands-on approach to technical challenges.</p>
         </div>
         <div class="grid">
-          <article class="card"><span class="card-number">01 / INFRASTRUCTURE</span><h3>IT &amp; networking</h3><p>Designing network infrastructure and supporting users, servers, cloud environments, and IT assets.</p><ul class="tags"><li>Network design</li><li>Microsoft Azure</li><li>Office 365</li><li>Active Directory</li><li>Cisco</li><li>Windows &amp; Linux</li></ul></article>
-          <article class="card"><span class="card-number">02 / ENGINEERING</span><h3>Electrical controls &amp; automation</h3><p>Applying electrical and electronic controls and maintenance experience to industrial systems and equipment, with insight into PLC systems.</p><ul class="tags"><li>Electrical &amp; electronic controls</li><li>ABB robotics</li><li>RAPID</li><li>PLC systems</li><li>SCADA</li><li>ETAP</li></ul></article>
-          <article class="card"><span class="card-number">03 / BUSINESS SOLUTIONS</span><h3>Power Platform &amp; projects</h3><p>Designing Microsoft Power Platform solutions to streamline business operations, with experience in project management.</p><ul class="tags"><li>Microsoft Power Platform</li><li>Business operations</li><li>Project management</li></ul></article>
-          <article class="card"><span class="card-number">04 / PAST EXPERIENCE</span><h3>Software testing</h3><p>Previous experience in functional, regression, and usability testing, including documenting defects and collaborating with development teams.</p><ul class="tags"><li>Functional testing</li><li>Regression testing</li><li>JIRA</li><li>TestRail</li></ul></article>
+          <article class="card"><span class="card-number">01 / SUPPORT</span><h3>IT support &amp; cloud</h3><p>Support users and enterprise applications, maintain hardware and servers, and administer Microsoft Azure, Office 365, and Active Directory. I also work with endpoint security and IT asset management.</p><ul class="tags"><li>Microsoft Azure</li><li>Office 365</li><li>Active Directory</li><li>Windows &amp; Linux</li></ul></article>
+          <article class="card"><span class="card-number">02 / INFRASTRUCTURE</span><h3>Network design &amp; infrastructure</h3><p>Design network infrastructure, deploy and troubleshoot LAN/WAN connections, and configure Cisco switches and routers. My experience also includes firewalls, access points, VPNs, and VLANs.</p><ul class="tags"><li>Network design</li><li>LAN/WAN</li><li>Cisco</li><li>VPN/VLAN</li></ul></article>
+          <article class="card"><span class="card-number">03 / ELECTRICAL</span><h3>Electrical &amp; electronic controls</h3><p>Install, maintain, and troubleshoot electrical systems and control circuits. My work includes electrical panel wiring, control logic, and preventive maintenance on industrial equipment.</p><ul class="tags"><li>Control circuits</li><li>Panel wiring</li><li>Maintenance</li><li>ETAP</li></ul></article>
+          <article class="card"><span class="card-number">04 / AUTOMATION</span><h3>Industrial automation &amp; robotics</h3><p>Write RAPID programs for ABB robots, maintain robotic systems, and troubleshoot hardware and software faults. I also bring knowledge of PLC and SCADA systems.</p><ul class="tags"><li>ABB robotics</li><li>RAPID</li><li>PLC systems</li><li>SCADA</li></ul></article>
+          <article class="card"><span class="card-number">05 / BUSINESS SOLUTIONS</span><h3>Power Platform &amp; project management</h3><p>Design Microsoft Power Platform solutions to streamline business operations. I also bring project management experience and prepare technical documentation and reports.</p><ul class="tags"><li>Microsoft Power Platform</li><li>Business operations</li><li>Project management</li></ul></article>
+          <article class="card"><span class="card-number">06 / PAST EXPERIENCE</span><h3>Software testing</h3><p>Previously led functional and usability testing, carried out regression testing, documented defects, and collaborated with development teams to improve software quality.</p><ul class="tags"><li>Functional testing</li><li>Regression testing</li><li>JIRA</li><li>TestRail</li></ul></article>
         </div>
       </div>
     </section>
@@ -230,6 +239,8 @@
     <section class="section contact-section" id="contact">
       <div class="wrap closing"><div><div class="eyebrow">Contact</div><h2>Let's connect.</h2><p>Interested in working together or discussing a technical challenge? Get in touch.</p><div class="contact-links"><a class="button primary" href="mailto:maxwell.matsri@outlook.com">maxwell.matsri@outlook.com</a><a class="button" href="tel:+233240796403">+233 240 796 403</a></div></div><a class="button" href="#top">Back to top &uarr;</a></div>
       <div class="wrap">
+        <details class="appointment-disclosure">
+        <summary class="button primary">Book an appointment</summary>
         <form class="appointment" id="appointment-form" action="https://formsubmit.co/maxwell.matsri@outlook.com" method="POST">
           <h3>Request an appointment</h3>
           <p>Share a preferred time and a little about your request. Maxwell will reply to confirm availability; this form does not book an appointment automatically. All fields except phone are required.</p>
@@ -250,6 +261,7 @@
           <p class="form-note">After you send, FormSubmit opens to show any verification step and a confirmation or error. If it reports an error, please use the email link above.</p>
           <button class="button primary" type="submit">Send appointment request</button>
         </form>
+        </details>
       </div>
     </section>
   </main>
