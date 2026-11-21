@@ -58,10 +58,11 @@
     .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: end; margin-bottom: 38px; }
     h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.045em; margin: 12px 0 0; }
     .section-intro { color: var(--muted); max-width: 500px; margin: 0; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
     .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 26px; box-shadow: 0 12px 35px #3933650a; }
     .grid:not(.projects) .card:nth-child(1) { border-top: 4px solid #7354d6; }
     .grid:not(.projects) .card:nth-child(2) { border-top: 4px solid #dd6880; }
+    .grid:not(.projects) .card:nth-child(3) { border-top: 4px solid #398a9e; }
     .card-number { color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .12em; }
     .card h3 { margin: 24px 0 10px; font-size: 1.18rem; letter-spacing: -.02em; }
     .card p, .card li { color: var(--muted); font-size: .93rem; }
@@ -70,7 +71,7 @@
     .tags li { color: #553b9c; background: #f0ebff; border: 1px solid #e2d9ff; border-radius: 100px; padding: 4px 10px; font-size: .76rem; }
     .timeline { border-top: 1px solid var(--line); }
     .role { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--line); }
-    .role time { color: var(--muted); font-size: .85rem; }
+    .role time, .role-period { color: var(--muted); font-size: .85rem; }
     .role h3 { margin: 0 0 3px; font-size: 1.1rem; }
     .company { color: var(--accent); font-size: .9rem; font-weight: 650; }
     .role p { color: var(--muted); margin: 10px 0 0; max-width: 700px; font-size: .94rem; }
@@ -155,6 +156,7 @@
         <div class="grid">
           <article class="card"><span class="card-number">01 / INFRASTRUCTURE</span><h3>IT &amp; networking</h3><p>Supporting users and maintaining reliable networks, servers, cloud environments, and IT assets.</p><ul class="tags"><li>Microsoft Azure</li><li>Office 365</li><li>Active Directory</li><li>Cisco</li><li>Windows &amp; Linux</li></ul></article>
           <article class="card"><span class="card-number">02 / ENGINEERING</span><h3>Electrical &amp; automation</h3><p>Applying electrical engineering and maintenance experience to control systems and industrial equipment.</p><ul class="tags"><li>ABB robotics</li><li>RAPID</li><li>PLC</li><li>SCADA</li><li>ETAP</li></ul></article>
+          <article class="card"><span class="card-number">03 / PAST EXPERIENCE</span><h3>Software testing</h3><p>Previous experience in functional, regression, and usability testing, including documenting defects and collaborating with development teams.</p><ul class="tags"><li>Functional testing</li><li>Regression testing</li><li>JIRA</li><li>TestRail</li></ul></article>
         </div>
       </div>
     </section>
@@ -167,6 +169,7 @@
         </div>
         <div class="timeline">
           <article class="role"><time>Apr 2025 &ndash; Present</time><div><h3>IT Field Support Engineer</h3><div class="company">TechnipFMC Ghana Ltd</div><p>Administer Azure, Office 365, and Active Directory; support networks, servers, users, security, and IT asset lifecycles.</p></div></article>
+          <article class="role"><span class="role-period">From Oct 2020 &bull; Past role</span><div><h3>Software Quality Assurance Lead</h3><div class="company">Applause uTest</div><p>Led functional and usability testing, performed regression testing, reported defects, and collaborated with global teams.</p></div></article>
           <article class="role"><time>Dec 2024 &ndash; Apr 2025</time><div><h3>RP Testing Field Support Assistant</h3><div class="company">SLB (Schlumberger)</div><p>Supported field equipment readiness, inventory, safety, and mobilization.</p></div></article>
           <article class="role"><time>Jul 2024 &ndash; Dec 2024</time><div><h3>Electrical &amp; IT Consultant</h3><div class="company">Freelance</div><p>Provided technical support, IT infrastructure solutions, and electrical maintenance and safety inspections.</p></div></article>
           <article class="role"><time>Oct 2023 &ndash; Oct 2024</time><div><h3>Graduate Trainee &ndash; Electrical, Robotics &amp; IT</h3><div class="company">Tenaris-Amaja Tubular Services Ltd</div><p>Worked across electrical maintenance, ABB robotics, network infrastructure, and pipe and warehouse operations.</p></div></article>
