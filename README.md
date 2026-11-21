@@ -9,7 +9,7 @@ Open `index.html` in a browser, or serve this directory with any static HTTP ser
 ## Publish with GitHub Pages
 
 1. Create a repository in a GitHub account or organization where you have permission to publish. Do not push this branch to the upstream Gitfolio repository.
-2. Push the portfolio files to that repository's default branch, including `index.html` and `assets/maxwell-matsri.jpg`.
+2. Push the portfolio files to that repository's default branch, including `index.html` and `assets/maxwell-matsri-transparent.png`.
 3. In the new repository, open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select the default branch and **/ (root)**, and save.
 4. Wait for the Pages deployment to finish and open the URL shown in Settings. A project site usually appears at `https://<username>.github.io/<repository>/`; an account site named `<username>.github.io` appears at the domain root.
 
