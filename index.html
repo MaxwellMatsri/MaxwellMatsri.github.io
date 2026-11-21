@@ -52,10 +52,15 @@
     .button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
     .button { transition: transform .18s ease, box-shadow .18s ease; }
     .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px #3933651c; }
-    .portrait-card { position: relative; padding: 12px; border: 1px solid #e6d9f4; border-radius: 24px; background: linear-gradient(145deg, #e6dcff, #ffe2e6); box-shadow: 0 24px 80px #5e4d8c24; }
+    .portrait-card { position: relative; }
     .portrait-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 20%; border-radius: 15px; }
-    .portrait-caption { padding: 12px 5px 5px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; font-size: .8rem; color: var(--muted); }
-    .portrait-caption strong { color: var(--text); }
+    .location { margin-top: 16px; }
+    .location-label { margin: 12px 0 6px; color: var(--muted); font-size: .7rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    .location-list { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
+    .location-list li { padding: 5px 10px; border-radius: 100px; background: #eae3ff; color: #4a348d; font-size: .78rem; font-weight: 700; animation: location-float 2.8s ease-in-out infinite alternate; }
+    .location-list li:nth-child(2) { animation-delay: -.8s; }
+    .location-list.work-style li { background: #e0f3f0; color: #205b55; }
+    .location-list.work-style li:first-child { animation-delay: -1.4s; }
     .section { padding: 85px 0; border-top: 1px solid var(--line); }
     .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: end; margin-bottom: 38px; }
     h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.045em; margin: 12px 0 0; }
@@ -66,6 +71,7 @@
     .revealed { animation: rise-in .6s ease-out; }
     @keyframes rise-in { from { opacity: .4; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes glow-drift { from { transform: translate(-20px, 0) scale(.96); } to { transform: translate(20px, 30px) scale(1.05); } }
+    @keyframes location-float { from { transform: translateY(0); } to { transform: translateY(-4px); } }
     .grid:not(.projects) .card:nth-child(1) { border-top: 4px solid #7354d6; }
     .grid:not(.projects) .card:nth-child(2) { border-top: 4px solid #dd6880; }
     .grid:not(.projects) .card:nth-child(3) { border-top: 4px solid #398a9e; }
@@ -113,7 +119,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .hero::before, .hero-grid > div, .revealed, .project-details[open] p { animation: none; }
+      .hero::before, .hero-grid > div, .revealed, .project-details[open] p, .location-list li { animation: none; }
       .button, .card, nav a { transition: none; }
       .button:hover, .card:hover, .card:focus-within { transform: none; }
     }
@@ -147,7 +153,12 @@
         </div>
         <div class="portrait-card">
           <img src="assets/maxwell-matsri.jpg" alt="Portrait of Maxwell Kofi Matsri" width="480" height="600">
-          <div class="portrait-caption"><strong>Maxwell Kofi Matsri</strong><span>Accra, Ghana</span></div>
+          <div class="location">
+            <p class="location-label" id="location-heading">Locations</p>
+            <ul class="location-list" aria-labelledby="location-heading"><li>Accra</li><li>Takoradi</li></ul>
+            <p class="location-label" id="work-style-heading">Work style</p>
+            <ul class="location-list work-style" aria-labelledby="work-style-heading"><li>Hybrid</li><li>Remote</li></ul>
+          </div>
         </div>
       </div>
     </section>
