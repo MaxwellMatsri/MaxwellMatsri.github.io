@@ -90,7 +90,8 @@
     .role time, .role-period { color: var(--muted); font-size: .85rem; }
     .role h3 { margin: 0 0 3px; font-size: 1.1rem; }
     .company { color: var(--accent); font-size: .9rem; font-weight: 650; }
-    .role p { color: var(--muted); margin: 10px 0 0; max-width: 700px; font-size: .94rem; }
+    .role ul { color: var(--muted); margin: 10px 0 0; padding-left: 1.2em; max-width: 700px; font-size: .94rem; }
+    .role li + li { margin-top: 6px; }
     .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .project-label { color: var(--accent); font-size: .76rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
     .projects h3 { margin-top: 18px; }
@@ -105,7 +106,6 @@
     .closing { display: flex; justify-content: space-between; gap: 24px; align-items: center; }
     .closing h2 { margin-bottom: 14px; }
     .closing p { color: var(--muted); max-width: 650px; margin-bottom: 0; }
-    .closing .sms-note { margin-top: 12px; font-size: .85rem; }
     .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
     .contact-links a { overflow-wrap: anywhere; }
     .appointment-disclosure { margin-top: 32px; }
@@ -211,14 +211,14 @@
           <p class="section-intro">A background spanning field support, infrastructure, electrical and electronic controls, automation, and robotics.</p>
         </div>
         <div class="timeline">
-          <article class="role"><time>Apr 2025 &ndash; Present</time><div><h3>IT Field Support Engineer</h3><div class="company">TechnipFMC Ghana Ltd</div><p>Administer Azure, Office 365, and Active Directory; support networks, servers, users, security, and IT asset lifecycles.</p></div></article>
-          <article class="role"><span class="role-period">From Oct 2020 &bull; Past role</span><div><h3>Software Quality Assurance Lead</h3><div class="company">Applause uTest</div><p>Led functional and usability testing, performed regression testing, reported defects, and collaborated with global teams.</p></div></article>
-          <article class="role"><time>Dec 2024 &ndash; Apr 2025</time><div><h3>RP Testing Field Support Assistant</h3><div class="company">SLB (Schlumberger)</div><p>Assisted with field-testing equipment maintenance and readiness checks, organized field cabins, tracked tools and spare parts, and supported safe equipment preparation and mobilization.</p></div></article>
-          <article class="role"><time>Jul 2024 &ndash; Dec 2024</time><div><h3>Electrical &amp; IT Consultant</h3><div class="company">Freelance</div><p>Provided technical support, IT infrastructure solutions, and electrical maintenance and safety inspections.</p></div></article>
-          <article class="role"><time>Oct 2023 &ndash; Oct 2024</time><div><h3>Graduate Trainee &ndash; Electrical, Robotics &amp; IT</h3><div class="company">Tenaris-Amaja Tubular Services Ltd</div><p>Worked across electrical maintenance, ABB robotics, network infrastructure, and pipe and warehouse operations.</p></div></article>
-          <article class="role"><time>Aug 2022 &ndash; Dec 2022</time><div><h3>Maintenance Technician</h3><div class="company">Johndiv Ventures</div><p>Serviced mechanical and electrical components, diagnosed and repaired electrical appliances and systems, and installed electrical systems.</p></div></article>
-          <article class="role"><time>May 2020 &ndash; Mar 2021</time><div><h3>Wireline MDT Intern</h3><div class="company">SLB (Schlumberger)</div><p>Assisted with assembly and disassembly of Modular Dynamic Tester tools, maintained equipment readiness, and supported wireline fieldwork.</p></div></article>
-          <article class="role"><time>Mar 2019 &ndash; May 2020</time><div><h3>Onsite IT Support</h3><div class="company">SLB (Schlumberger)</div><p>Installed and maintained hardware, software, and networks under supervision; supported users, server commissioning, Cisco equipment, VoIP, and IT asset management.</p></div></article>
+          <article class="role"><time>Apr 2025 &ndash; Present</time><div><h3>IT Field Support Engineer</h3><div class="company">TechnipFMC Ghana Ltd</div><ul><li>Administer Azure, Office 365, and Active Directory, including user provisioning and security policies.</li><li>Deploy and troubleshoot LAN/WAN networks, configure Cisco switches and routers, and manage Windows and Linux servers.</li><li>Support users and enterprise applications, maintain endpoint security, and manage IT asset lifecycles.</li></ul></div></article>
+          <article class="role"><span class="role-period">From Oct 2020 &bull; Past role</span><div><h3>Software Quality Assurance Lead</h3><div class="company">Applause uTest</div><ul><li>Led functional and usability testing and carried out regression testing for releases and updates.</li><li>Executed test cases, documented software defects, and collaborated with global cross-functional teams.</li></ul></div></article>
+          <article class="role"><time>Dec 2024 &ndash; Apr 2025</time><div><h3>RP Testing Field Support Assistant</h3><div class="company">SLB (Schlumberger)</div><ul><li>Assisted with routine maintenance and readiness checks of field-testing equipment.</li><li>Organized and configured field cabins and maintained inventory records for tools and spare parts.</li><li>Supported equipment preparation and mobilization while following work-area safety procedures.</li></ul></div></article>
+          <article class="role"><time>Jul 2024 &ndash; Dec 2024</time><div><h3>Electrical &amp; IT Consultant</h3><div class="company">Freelance</div><ul><li>Diagnosed and resolved electrical and IT support issues.</li><li>Designed and implemented client-specific IT infrastructure, including network setups and system upgrades.</li><li>Conducted maintenance and safety inspections of electrical systems.</li></ul></div></article>
+          <article class="role"><time>Oct 2023 &ndash; Oct 2024</time><div><h3>Graduate Trainee &ndash; Electrical, Robotics &amp; IT</h3><div class="company">Tenaris-Amaja Tubular Services Ltd</div><ul><li>Programmed and maintained ABB robots using RAPID, performed preventive maintenance, and troubleshot hardware and software faults.</li><li>Modified and installed control circuits and electrical systems, including new control logic.</li><li>Monitored LAN, WLAN, and WAN networks, maintained servers, and applied security updates.</li><li>Inspected pipes, supported warehouse and coating operations, and prepared technical reports.</li></ul></div></article>
+          <article class="role"><time>Aug 2022 &ndash; Dec 2022</time><div><h3>Maintenance Technician</h3><div class="company">Johndiv Ventures</div><ul><li>Serviced mechanical and electrical components as part of routine maintenance.</li><li>Diagnosed faults and repaired electrical appliances and systems.</li><li>Installed electrical systems, including wiring and setup.</li></ul></div></article>
+          <article class="role"><time>May 2020 &ndash; Mar 2021</time><div><h3>Wireline MDT Intern</h3><div class="company">SLB (Schlumberger)</div><ul><li>Assisted with assembly and disassembly of Modular Dynamic Tester (MDT) tools.</li><li>Maintained laboratory organization and equipment readiness.</li><li>Supported wireline fieldwork and downhole tool deployment.</li></ul></div></article>
+          <article class="role"><time>Mar 2019 &ndash; May 2020</time><div><h3>Onsite IT Support</h3><div class="company">SLB (Schlumberger)</div><ul><li>Installed hardware, software, networks, printers, and scanners under supervision; maintained systems and supported users onsite and remotely.</li><li>Participated in server commissioning and configured Cisco servers, switches, and access points.</li><li>Assisted with Cisco IP phone setup and IT asset management.</li></ul></div></article>
         </div>
       </div>
     </section>
@@ -238,7 +238,7 @@
     </section>
 
     <section class="section contact-section" id="contact">
-      <div class="wrap closing"><div><div class="eyebrow">Contact</div><h2>Let's connect.</h2><p>Interested in working together or discussing a technical challenge? Get in touch.</p><div class="contact-links"><a class="button primary" href="mailto:maxwell.matsri@outlook.com">maxwell.matsri@outlook.com</a><a class="button" href="tel:+233240796403">+233 240 796 403</a><a class="button" href="sms:+233240796403">Text Maxwell (SMS)</a></div><p class="sms-note">The SMS link opens your messaging app; you send the message yourself. Carrier charges may apply.</p></div><a class="button" href="#top">Back to top &uarr;</a></div>
+      <div class="wrap closing"><div><div class="eyebrow">Contact</div><h2>Let's connect.</h2><p>Interested in working together or discussing a technical challenge? Get in touch.</p><div class="contact-links"><a class="button primary" href="mailto:maxwell.matsri@outlook.com">maxwell.matsri@outlook.com</a><a class="button" href="tel:+233240796403">+233 240 796 403</a></div></div><a class="button" href="#top">Back to top &uarr;</a></div>
       <div class="wrap">
         <details class="appointment-disclosure">
         <summary class="button primary">Book an appointment</summary>

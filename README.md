@@ -19,9 +19,7 @@ GitHub Pages availability and visibility depend on the repository and account se
 
 Edit `index.html` to update experience, skills, projects, or contact links. The email address and phone number are displayed publicly as requested; the original CV and references are not included. Review the content, contact information, and portrait before making the repository public.
 
-Select **Book an appointment** in the contact section to open the form. Requests are submitted directly to [FormSubmit](https://formsubmit.co/), which shows any verification step and its confirmation or error page. The first submission triggers an activation email; confirm it before requests can be delivered to the contact email. FormSubmit says it retains submissions for up to 30 days. The form requests an appointment rather than booking one automatically; it does not send SMS.
-
-The **Text Maxwell (SMS)** link opens the visitor's messaging app; the visitor sends the message manually, and carrier charges may apply.
+Select **Book an appointment** in the contact section to open the form. Requests are submitted directly to [FormSubmit](https://formsubmit.co/), which shows any verification step and its confirmation or error page. The first submission triggers an activation email; confirm it before requests can be delivered to the contact email. FormSubmit says it retains submissions for up to 30 days. The form requests an appointment rather than booking one automatically.
 
 If requests are not arriving, check the contact email's inbox and spam folder for FormSubmit's activation message and confirm it. If FormSubmit reports an error, note its message and use the direct email link to follow up; a network failure may occur after a request was received, so resending can create duplicates.
 
