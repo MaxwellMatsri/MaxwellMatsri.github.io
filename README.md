@@ -19,4 +19,6 @@ GitHub Pages availability and visibility depend on the repository and account se
 
 Edit `index.html` to update experience, skills, projects, or contact links. The email address and phone number are displayed publicly as requested; the original CV and references are not included. Review the content, contact information, and portrait before making the repository public.
 
+Appointment requests are processed by [FormSubmit](https://formsubmit.co/) and delivered to the contact email. The first submission triggers an activation email; confirm it before requests can be delivered. FormSubmit says it retains submissions for up to 30 days. The form requests an appointment rather than booking one automatically; it does not send SMS.
+
 Only the personalized entry point and portrait are needed for deployment; the original template's sample pages are not part of this portfolio.
