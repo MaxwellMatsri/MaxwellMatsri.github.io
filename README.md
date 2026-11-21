@@ -21,4 +21,6 @@ Edit `index.html` to update experience, skills, projects, or contact links. The 
 
 Appointment requests are processed by [FormSubmit](https://formsubmit.co/) and delivered to the contact email. The first submission triggers an activation email; confirm it before requests can be delivered. FormSubmit says it retains submissions for up to 30 days. The form requests an appointment rather than booking one automatically; it does not send SMS.
 
+If requests are not arriving, check the contact email's inbox and spam folder for FormSubmit's activation message and confirm it. If the form reports an error, note its message and use the direct email link to follow up; a network failure may occur after a request was received, so resending can create duplicates.
+
 Only the personalized entry point and portrait are needed for deployment; the original template's sample pages are not part of this portfolio.

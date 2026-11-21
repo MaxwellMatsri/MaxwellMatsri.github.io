@@ -291,6 +291,7 @@
       appointmentStatus.textContent = 'Sending your request to FormSubmit...';
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 20000);
+      let failureReason = '';
       try {
         const response = await fetch('https://formsubmit.co/ajax/maxwell.matsri@outlook.com', {
           method: 'POST',
@@ -298,14 +299,24 @@
           body: JSON.stringify(Object.fromEntries(new FormData(appointmentForm))),
           signal: controller.signal
         });
-        if (!response.ok) throw new Error('FormSubmit returned an error');
-        const result = await response.json();
-        if (result.success !== true && result.success !== 'true') throw new Error('FormSubmit did not confirm receipt');
+        let result;
+        try {
+          result = await response.json();
+        } catch (error) {
+          failureReason = response.ok ? 'FormSubmit returned an unexpected response.' : `FormSubmit returned HTTP ${response.status}.`;
+          throw error;
+        }
+        if (!response.ok || !result || (result.success !== true && result.success !== 'true')) {
+          const message = result && typeof result.message === 'string' ? result.message.replace(/[\x00-\x1f\x7f]/g, ' ').trim().slice(0, 200) : '';
+          failureReason = `FormSubmit could not confirm receipt${response.ok ? '' : ` (HTTP ${response.status})`}.${message ? ` ${message}${/[.!?]$/.test(message) ? '' : '.'}` : ''}`;
+          throw new Error('FormSubmit did not confirm receipt');
+        }
         appointmentStatus.textContent = 'FormSubmit accepted your request. Email delivery requires recipient activation, and your appointment is not confirmed until Maxwell replies.';
         appointmentForm.reset();
       } catch (error) {
         appointmentStatus.classList.add('error');
-        appointmentStatus.textContent = "We couldn't confirm your request was received. Please try again or email Maxwell using the link above.";
+        const reason = error.name === 'AbortError' ? 'The request timed out.' : failureReason || 'The connection to FormSubmit failed.';
+        appointmentStatus.textContent = `${reason} We could not confirm whether your request was received. Please email Maxwell using the link above if you need to follow up.`;
       } finally {
         clearTimeout(timeout);
         submitButton.disabled = false;
