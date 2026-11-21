@@ -17,6 +17,6 @@ GitHub Pages availability and visibility depend on the repository and account se
 
 ## Personalization and privacy
 
-Edit `index.html` to update experience, education, projects, or contact links. The email address and phone number are displayed publicly as requested; the original CV and references are not included. Review the content, contact information, and portrait before making the repository public.
+Edit `index.html` to update experience, skills, projects, or contact links. The email address and phone number are displayed publicly as requested; the original CV and references are not included. Review the content, contact information, and portrait before making the repository public.
 
 Only the personalized entry point and portrait are needed for deployment; the original template's sample pages are not part of this portfolio.
